@@ -1,0 +1,226 @@
+* {
+    font-family: 'Quicksand', sans-serif; font-family: 'Roboto', sans-serif;
+}
+body {
+    font-size: 14px;
+}
+
+.title-mision {
+    width: 24ch; /* El numero de caracteres que tiene la linea */
+    overflow: hidden;
+    animation: typing 4s steps(24), /* El numero de caracteres que tiene la linea */
+}
+.main {
+    padding-top: 55px; 
+    background-image: radial-gradient(circle at 50% 120.71%,  #fedaf5 41.67%, #f2cdf2 50%, #e4c1f0 58.33%, #d3b8ef 66.67%, #c1b0ef 75%, #adaaef 83.33%, #97a6ef 91.67%, #7ea3ef 100%);
+}
+.container-info-sobre-nosotros {
+    display: block;
+    justify-content: center;
+    align-items: center;
+}
+.title-sobre-nosotros {
+    font-size: 18px;
+    padding: 10px;
+    color: #002868;
+}
+.section-img {
+    display: block;
+    justify-content: center;
+    align-items: center;
+    width: 400px;
+    height: 100%;
+    padding: 0;
+    margin: 0 auto;
+    box-shadow: 0 0 0 1px #fff,
+    0 15px 50px;
+}   
+.container-contacto {
+    display: grid;
+    grid-template-columns: 50% 50%;
+    justify-content: center;
+    gap: 5px;
+}
+.container-img {
+    display: block;
+    width: 100%;
+    height: 100%; 
+    background: #522370e1;  
+    background-image: url(../img/logo-u-digital.png);
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+}
+.container-img img:hover {filter: saturate(180%);}
+
+.container-form {
+     display: grid;
+     width: 98.8%;
+     margin: 0 auto;
+     padding: 10px 0;
+     margin-left: 5px;
+}
+.contactos {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+}
+.botton-contact {
+    padding: 5px 7px;
+    border-radius: 4px;
+    font-size: 14px;
+    font-weight: bold;
+    box-shadow: 1px 1px 1px 1px rgba(0, 0, 0, 0.481);
+    background: #42872f;
+}
+.botton-contact img {
+    height: 18px;
+    width: 18px;
+    margin: 2px;
+    object-fit: contain;
+    position: relative;
+    top: 5px;
+}
+.correo {
+    background: #6174ca;
+}
+.correo:hover {
+    background: #869af0 !important;
+}
+.botton-contact:hover {
+    background: #48d123;
+    color: #fff;
+    transform: scale(1.1);
+}
+.redes-sociales {
+    display: flex;
+    align-items: center;
+    gap: 7px;
+    margin: 0 auto;
+    margin-top: 5px;
+}
+.redes-sociales a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 4px;
+    padding: 0 2px;
+    box-shadow: 1px 1px 1px 1px rgba(0, 0, 0, 0.481);
+    height: 30px;
+    width: 70px;
+    font-size: 10px;
+    font-weight: bold;
+}
+.redes-sociales a img {
+    height: 20px;
+    width: 25px;
+    object-fit: contain;
+}
+.redes-sociales .instagram {
+    color: #fff;
+    background-image: linear-gradient(270deg, #ceae33 0, #d7a52e 6.25%, #de9c2b 12.5%, #e5912a 18.75%, #ea842b 25%, #ef762d 31.25%, #f16631 37.5%, #f35336 43.75%, #f23c3c 50%, #f01843 56.25%, #ed004c 62.5%, #e90057 68.75%, #e30063 75%, #dc0070 81.25%, #d2007f 87.5%, #c6008e 93.75%, #b7009e 100%);
+}
+.redes-sociales .instagram:hover {
+    background-image: linear-gradient(95deg, #ceae33 0, #d7a52e 6.25%, #de9c2b 12.5%, #e5912a 18.75%, #ea842b 25%, #ef762d 31.25%, #f16631 37.5%, #f35336 43.75%, #f23c3c 50%, #f01843 56.25%, #ed004c 62.5%, #e90057 68.75%, #e30063 75%, #dc0070 81.25%, #d2007f 87.5%, #c6008e 93.75%, #b7009e 100%);
+}
+.redes-sociales .facebook {
+    color: #fff;
+    background: #2b98c8;
+}
+.redes-sociales .facebook:hover {
+    background: #49abe4;
+}
+.redes-sociales .tiktok {
+    color: #fff;
+    background: #414039;
+}
+.redes-sociales .tiktok:hover {
+    background: #36344b;
+}
+.container-redes-sociales h4 {
+    padding-top: 5px;
+}
+.contactos h4 {
+    color: #002868;
+    font-size: 16px;
+    margin-top: 5px;
+}
+.container-form h3 {
+    color: #002868;
+}
+.container-form a {
+    position: relative;
+    color: #fff;
+}
+.contactos a:hover img {
+    rotate: 360deg;
+    transform: scale(.9);
+}
+.container-form a:hover {
+    transform: scale(1.1);
+}
+.container-form .contactos a .contacto-icon {
+    position: relative;
+    top: 8px;
+    height: 22px;
+    width: 22px;
+    object-fit: contain;
+}
+.container-form a img:hover {
+    position: relative;
+    top: 9px;
+}
+.container-form form {
+    display: grid;
+    width: 80%;
+    margin: 0 auto;
+}
+.container-form form input {
+    margin: 3px 0;
+    padding: 9px;
+    border: none;
+    border-radius: 3px;
+    box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.481);
+}
+.container-form form textarea {
+    border: none;
+    border-radius: 3px;
+    box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.481);
+    margin-top: 3px;
+    margin-bottom: 3px;
+    padding: 7px;
+}
+.input-enviar {
+    color: #fff;
+    font-weight: bold;
+    background: #51cb2f;
+    border-radius: 10px !important;
+}
+@media screen and (max-width: 750px) {
+    .logo-empresa {
+        width: 70%;
+        height: 100%;
+        object-fit: cover;
+        margin: 0 auto;
+        border-radius: 8px;
+    }
+    .container-contacto {
+        grid-template-columns: 30% 70%;
+        gap: 0;
+    }
+    .title-sobre-nosotros {
+        font-size: 16px;
+    }
+}
+@media screen and (max-width: 550px) {
+    .contactos {
+        grid-template-columns: 1fr;
+    }
+    .subtitle2 span {
+        font-size: 16px;
+        padding: 10px;
+    }
+    .container-form form {
+        width: 90%;
+    }
+}

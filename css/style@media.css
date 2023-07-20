@@ -1,0 +1,181 @@
+
+@media screen and (max-width: 1000px) {
+    .menu .contenedor-enlaces-nav {
+        padding: 0 10px;
+    }
+    .menu .contenedor {
+        width: 100%;
+    }
+    .menu .box {
+        margin: 0 auto;
+    }
+}
+@media screen and (max-width: 900px) {
+    #fecha {
+        display: none;
+    }
+    .menu {
+        padding: 10px 0px;    /* 5px arriba y abajo y 0 en los lados */
+        background: #522370;  
+    }
+    .menu .contenedor {
+        width: 95%;
+    }
+    .menu .contenedor-botones-menu {
+        display: flex;
+        padding: 0 5px;
+    }
+    .menu .contenedor-botones-menu button {
+        background: transparent;
+    }
+    .menu .contenedor-botones-menu .btn-menu-cerrar {
+        display: none; /* mostramos el icono de cerrar menu para que no se vea en dispositivos moviles */
+    }
+    .menu .contenedor-enlaces-nav {
+        padding: 20px;
+        flex-direction: column;  /* hace que el nav se ponga hacia abajo*/
+        align-items: flex-start;
+        justify-content: flex-start;
+        position: fixed;
+        left: 0;
+        top: 55px;
+        background: #522370;
+        color: #000;
+        box-shadow: 0px 3px 6px rgba(31, 32, 34, 0.752);
+        height: 100vh;
+        width: 85%;
+        z-index: 2000;
+        overflow: auto; 
+        transition: .6s ease all;
+        transform: translate(-100%); /* saca el menu en la pantalla llevandolo un 100% menos de la pantalla a la izquierda*/
+    }
+    .menu .contenedor-enlaces-nav.activo {  /* vamos activar de nuevo haciendo aparecer el menu en la pantalla con javascript*/
+        transform: translate(0);
+    }
+    .menu .btn-departamentos {
+        width: 100%;
+        align-items: center;
+        justify-content: space-between;
+        cursor: pointer;
+    }
+    .menu .btn-departamentos img {
+        position: static;
+        margin-left: 20px;
+        transform: rotate(-90deg);   /* gira vel icono del abajo para que pueda apuntar de lado */
+    }
+    .menu .enlaces {
+        width: 100%;
+    }
+    .menu .enlaces a {
+        display: block;
+        margin: 5px 0;
+        padding: 5px;
+        position: relative;
+        color: #000;
+        background: #ccc;
+    }
+    .enlaces a img {
+        display: inline;
+        height: 20px;
+    }
+    .enlaces  a {
+        display: flex;
+        align-items: center;
+    }
+    .menu .enlaces a span {
+        position: absolute;
+        left: 39px;
+        top: 6px;
+    }
+    .grids {
+        display: grid;
+        transition: .3s ease all;
+        transform: translateX(-120%);
+        z-index: 3000;
+        width: 85%;
+        position: fixed;
+        top: 0;
+        left: 0;
+        height: 100vh;
+        grid-template-areas: 'categorias categorias categorias categorias';
+    }
+    .grids > div {  /* trabajamos con los div directos del grids para darle un fondo blanco con un margen sombreado*/
+        background: #522370;
+        box-shadow: 0px 3px 6px rgba(0, 0, 0, .30);
+        color: #fff;
+    }
+    .grids.activo{
+        transform: translate(0);
+    }
+    .grids::before {
+        display: none;
+    }
+    .grids .btn-regresar {
+        display: inline-block;
+    }
+    .grids .categorias {
+        height: 100vh;
+    }
+    .grids .categoria .subtitulo {
+        display: block;
+        width: 100%;
+    }
+   .grids .contenedor-subcategorias {
+        position: absolute;
+        top: 0;
+        width: 100%;
+        height: 100vh;
+        transform: translate(-100%);  /* Sacamos las subcategorias en pantalla*/
+        transition: .3s ease all;
+        overflow: auto;
+    }
+    .grids .subtitulo {
+        padding-left: 10px;
+    }
+    .grids .contenedor-subcategorias.activo {
+        transform: translate(0);
+    }
+    .grids  .subcategoria {
+        grid-template-columns: 1fr;
+        height: 100vh;
+    }
+    .grids .contenedor-subcategorias .banner-subcategoria {
+        width: 100%;
+        height: 40vh;
+
+        overflow: hidden;
+    }
+    .grids .contenedor-subcategorias .enlaces-subcategoria {
+        overflow: auto;
+    }
+    .grids .contenedor-subcategorias .galeria-subcategoria a {
+        width: 25%;
+        height: 100%;
+    }
+    .form {
+
+        width: 90%;
+        height: 100%;
+    }
+@media screen and (max-width: 950px) {
+    .contacta-detalle {
+        display: block;
+    }     
+}
+@media screen and (max-width: 750px) {
+    .container-logo-u-digital{
+        display: block;
+        margin: 0 auto;
+    }  
+    .logo-empresa {
+        width: 80%;
+    }  
+}
+
+@media screen and (max-width: 950px) {
+    .footer .box-container {
+        grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+        font-size: 13px;
+    }    
+}
+}

@@ -1,0 +1,474 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="./css/style@media.css">
+    <link rel="icon" type="image/png" href="./icon/logo-u-digital.ico">
+
+<meta name="title" content="Concierto Billy Bóho & El adorador">
+<meta name="description" content="El concierto que tendrá lugar en la ciudad de Bata concretamente en el Hotel Ekamche, promete ser una experiencia única para todos 
+los presentes. Billy Bóho y Jose Manuel han dedicado sus talentos a servir a Dios y llevar su mensaje a traves de sus canciones.">
+<meta name="Imagen" content="/img/concierto-bily.jpg">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://udigitaleg.com">
+<meta property="og:title" content="Concierto Billy Bóho & El adorador">
+<meta property="og:description" content="El concierto que tendrá lugar en la ciudad de Bata concretamente en el Hotel Ekamche, promete ser una experiencia única para todos 
+los presentes. Billy Bóho y Jose Manuel han dedicado sus talentos a servir a Dios y llevar su mensaje a traves de sus canciones.">
+<meta property="og:image" content="/img/concierto-bily.jpg">
+
+<meta property="twitter:card" content="summary_large_image">
+<meta property="twitter:url" content="https://udigitaleg.com">
+<meta property="twitter:title" content="Concierto Billy Bóho & El adorador">
+<meta property="twitter:description" content="El concierto que tendrá lugar en la ciudad de Bata concretamente en el Hotel Ekamche, promete ser una experiencia única para todos 
+los presentes. Billy Bóho y Jose Manuel han dedicado sus talentos a servir a Dios y llevar su mensaje a traves de sus canciones.">
+<meta property="twitter:image" content="/img/concierto-bily.jpg">
+
+<style>
+    * {
+    font-family: 'Quicksand', sans-serif; font-family: 'Roboto', sans-serif;
+    
+}
+body {
+    font-size: 14px;
+}
+    .concierto {
+        margin: 0 auto;
+        display: block;
+        gap: 10px;
+        padding-top:50px;
+    }
+    .concierto-datos {
+        display: grid;
+        grid-template-columns: 70% 30%;
+        gap: 10px;
+        color: #ccc;
+        padding: 0 5px;
+        font-size: 16px;
+    }
+    .img-fondo {
+        background-image: url(/img/music2.jpg);
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-attachment: fixed;
+    }
+    .img-concierto {
+        background-image: url(/img/music1.jpg);
+        background-position: end;
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+    .img-concierto img {
+        display: flex;
+        margin: 0 auto;
+        width: 400px;
+        height: 330px;
+        object-fit: cover;
+    }
+    .info-concierto {
+        padding-top: 5px;
+        background: #1c1b1b86;
+    }
+    .info-concierto p {
+        padding: 5px 7px;
+    }
+    .info-concierto h2 {
+        color: #fff;
+        padding: 0 7px;
+        font-size: 20px;
+    }
+    .info-concierto h3 {
+        color: #fff;
+        padding: 0 7px;
+        margin-bottom: 5px;
+    }
+
+.container-contact {
+    margin: 0 auto;
+}
+*,
+::after,
+:before {
+    box-sizing: border-box;
+}
+strong{
+    font-weight: bold;
+}
+.canvas-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    width: 85%;
+    margin: 0 auto;
+    margin-bottom: 5px;
+    gap: 25px;
+}
+.canvas-wrapper .canvas + .canvas{
+    margin-left: 30px;
+}
+.canvas{
+    position: relative;
+    display: block;
+    width: 150px;
+    height: 160px;
+    padding: 10px;
+    color: inherit;
+    text-decoration: none;
+    margin: 0 auto;
+    margin-bottom: 10px;
+}
+.canvas_border{
+position: absolute;
+top: 40px;
+left: 0;
+height: 100%;
+width: 100%;
+z-index: 0;
+}
+.canvas_img-wrapper {
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background: #000;
+    border-radius: 100%;
+}
+.canvas_img {
+    transform: scale3d(0.9 0.9 0.9);
+    opacity: 0.8;
+    max-width: 170px;
+    max-height:170px;
+    box-shadow: 1px 1px 1px 1px rgba(0, 0, 0, 0.481);
+    border-radius: 100%;
+}
+.canvas_copy {
+    position: absolute;
+    bottom: 0;
+    left: 52%;
+    color: #e5ff00;
+    z-index: 100;
+}
+.canvas_copy_title{
+    font-size: 16px;
+    display: block;
+    transform: translateX(-80px);
+    transition: all 0.75s cubic-bezier(0.68, -0.55, 0.265, 1.55) 0s;
+    color: #fff;
+}
+.canvas_copy_title:nth-child(1) {
+    transition-delay:0.1s;
+}
+.canvas_copy_title:nth-child(2) {
+    transition-delay:0.2s;
+}
+
+.canvas_copy_details {
+    display: block;
+    transition: all 0.75s cubic-bezier(0.68, -0.55, 0.265, 1.55) 0.14s;
+    transform: translateX(-80px);
+    font-size: 14px;
+}
+.canvas_border
+.canvas_img-wrapper
+.canvas_img {
+    transition: all 0.25s ease-in-out 0s;
+}
+.canvas_border
+.canvas_img-wrapper {
+    transform: rotate(-10deg) skew(-10deg);
+}
+.canvas_copy_title,
+.canvas_copy_details {
+    opacity: .8;
+    background: #0000009a;
+}
+.canvas:hover .canvas_copy_title,
+.canvas:hover .canvas_copy_details,
+.canvas:hover .canvas_img {
+    opacity: 1;
+}
+.canvas:hover .canvas_border,
+.canvas:hover .canvas_img-wrapper {
+    transform: rotate(0deg) skew(0deg) scale(0.96);
+}
+.canvas:hover .canvas_img {
+    transform: scale3d(1, 1, 1);
+}
+.canvas:hover .canvas_copy_title,
+.canvas:hover .canvas_copy_details {
+    transform: translateX(0);
+    
+}
+.canvas:hover .canvas_copy_subtitle {
+    transform: rotate(270deg) translateY(-100%) translateX(-100%);
+}
+@keyframes fade-in {
+    from{opacity: 0;
+    }
+    to{opacity: 1;
+    }
+}
+.mas-info h4 {
+    color: #fff;
+    font-size: 15px;
+    padding: 5px;
+}
+.mas-info  {
+    text-align: center;
+}
+.botton-contact {
+    padding: 7px 5px;
+    border-radius: 4px;
+    font-size: 13px;
+    color: #000;
+    background: #12eb70;
+    border-radius:8px;
+    box-shadow: 1px 1px 1px 1px rgba(0, 0, 0, 0.481);
+}
+.botton-contact img {
+    height: 16px;
+    width: 18px;
+    object-fit: contain;
+    position: relative;
+    top: 3px;
+}
+.botton-contact:hover {
+    background: #00ff6e;
+    color: #fff;
+    transform: scale(1.1);
+}
+.whatsapp {
+    position: relative;
+    top: 10px;
+    margin-left: 13px;
+}
+.container-contact  .whatsapp {
+    color: #43b723;
+    font-weight: bold;
+}
+.container-contact   .whatsapp:hover {
+    color: #47ea1b;
+    font-weight: bold;
+}
+ .whatsapp img {
+    height: 32px;
+    width: 32px;
+    padding: 2px;
+    background: #43b723;
+    border-radius: 20%;
+    box-shadow: 1px 1px 1px 1px rgba(0, 0, 0, 0.481);
+}
+.whatsapp img:hover {
+    background: #47ea1b;
+    transform: scale(1.1);
+}
+@media screen and (max-width: 1000px) {
+.concierto-datos {
+    grid-template-columns: 1fr;
+    padding: 0;
+}
+}
+@media screen and (max-width: 500px) {
+.img-concierto img {
+    width: 100%;
+    height: 300px;
+}
+}
+@media screen and (max-width: 400px) {
+    .img-concierto img {
+        height: 270px;
+    }
+}
+</style>
+    <title>Concierto Billy Bóho & El adorador</title>
+</head>
+<header>
+    <nav class="menu" id="menu"> 
+        <div class="contenedor  contenedor-botones-menu">
+            <!-- Los dos botones deben contener los iconos de menu y cerrar menu-->
+            <button id="btn-menu-barras" class="btn-menu-barras"> <img src="https://img.icons8.com/material-outlined/24/FFFFFF/menu--v1.png" alt="menu--v1"/> </button>
+            <button id="btn-menu-cerrar"  class="btn-menu-cerrar"><img src="https://img.icons8.com/ios/50/FFFFFF/close-window--v1.png" alt="close-window--v1"/></button>
+        </div>
+        
+        <div class="contenedor contenedor-enlaces-nav" >   <!-- Contenedor de enlaces principales-->
+           <div class="btn-departamentos" id="btn-departamentos" >
+               <p>Servicios de nuestros clientes<span> Publicidad y Marketing</span> </p>  <!--le hemos puesto span para que el departamento le podamos editar aparte y ponerle debajo de 'todos los'-->
+                <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAB4AAAAeCAYAAAA7MK6iAAAAAXNSR0IArs4c6QAAAM1JREFUSEvtlOENwiAQRl8nsCM4giO4iXUyHcURHMERdAPzJZA0pnAcreIP+EXCcS/f49qBRmtoxKWDf2a+q+6qv2bg74frCNwK4xfVliSegAtwBc4GXDWnUKd9clngEXgAu9AhB49Qlb6APfBMkS2w7h2C5hz8Eyrd9zWJ490c3A1V05LEObju602jXjNpbOYBL2mPffSmxVBv4lRyN7QWPE+uvStprer5oGrgtLLTu+ZzMv4Zdcfe4aqjLNzq4M1UWo26asvQZufNVL8BhbkiH/8ZzykAAAAASUVORK5CYII=" alt="icon-abajo"/> <!--El icono que debe estar al lado del departamento con señalización de abajo-->
+           </div>
+           <div class="cerrar-btn-departamentos" id="cerrar-btn-departamentos" >
+            <p>Servicios de nuestros clientes<span> Publicidad y Marketing</span> </p>  <!--le hemos puesto span para que el departamento le podamos editar aparte y ponerle debajo de 'todos los'-->
+            <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAB4AAAAeCAYAAAA7MK6iAAAAAXNSR0IArs4c6QAAATxJREFUSEvVluFtwkAMRl8maDegI8AElBGYgLIBGwAbdIOWDdgAmKAdod0AJmj1STG6nJIUYUdJLeXHJSe/fLbPvoKerOiJy6DAT8AoOBLfwFfqM1f8DiyCoeZOvpe2SMEvwFtHUHM7B/ZapOANsO4YvAXEGR74FKx8Wvr7U3H0Mfv5t+BHQOf8M0vFuDyn54YUuRQLeijBswQuqN6rQeh9HdwFTo+bnAsiE1Q/JbsWT6bcBZavtLOZMoPuADWhOnODc7hB2qDaEwJWTj8yWZOagku3uMFWSBZec245z6vdvrvAOVThldk0a4O7wUfgAUhzagV3AZ4bQu4CS51Uq3JXWY5fy4rvJNSeueFWfC/8ZrByFWmqjUpnG8TVp6krRSmvdLe6ga+xpyfSNLlar7eRsFZf0Vecm3+8N/Av4CBiH30a7RMAAAAASUVORK5CYII=" alt="icon-regresar"/> 
+        </div>
+        <div class="enlaces">
+            <a href="./index.html"> <img src="./icon/bxs-home-alt-2.svg" alt="icon-home"> <span>Inicio</span></a>
+            <a href="./sobre-nosotros.html"> <img src="./icon/bxs-info-circle.svg" alt="icon-sobre-nosotros"> <span>Sobre nosotros</span></a>
+            <a href="./contacto.html"> <img src="./icon/bxs-contact.svg" alt="icon-contact"> <span>Contáctanos</span> </a>
+        </div>
+        <div class="container-logo-u-digital">
+            <img src="./img/logo-u-digital.png" alt="img-logo">
+        </div>
+        </div>
+        <div class="contenedor contenedor-grids">   <!-- Contenedor de subenlaces de departamentos -->
+              <div  class="grids" id="grids" >
+                  <div class="categorias" >
+                     <button class="btn-regresar"> <img class="atras" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAB4AAAAeCAYAAAA7MK6iAAAAAXNSR0IArs4c6QAAAOJJREFUSEvtld0NwjAMhK+bwQawAUxW2IARGAE2YQTkKkGRldY/dRoeWqkvaePP5/icAZ2eoRMXO3izyntKfQHwSq87USuYoCOAD4DjGrgFnKFZ5RXAzStZCw6FUrIacDhUA24ClcDNoEvgptA5MIdS57q7t+j6d7LhtMSbi0O9bqntI98/84e/AVNCXPU9qNQ0ZmniVUud17s01yZwaXI1Uy6Ba2e+6nKQzpjbIVy5RvHcmZ8BPLxGt4DLstMUOpT2sCZgBVP8U5pAP09aodLt5Imn3uNRrA6+9OMODimjJsgXhoMuHz3E3JMAAAAASUVORK5CYII=" alt="icon-regresar"/> Regresar</button>
+                     <h3 class="subtitulo">Categorias</h3>
+                     <a href="#" data-categoria="Ventas">Ventas</a> <!--Para ver los detalles cuando pasamos el cursor-->
+                     <a href="#" data-categoria="Educación">Educación </a> <!--Para ver los detalles cuando pasamos el cursor-->
+                     <a href="#" data-categoria="Coches">Vehículos </a> <!--Para ver los detalles cuando pasamos el cursor-->
+                     <a href="#" data-categoria="Construcción">Construcción </a> <!--Para ver los detalles cuando pasamos el cursor-->
+                  </div>
+                  <div class="contenedor-subcategorias" >
+                    <div class="mensaje-subcategoria">
+                        <i>Por favor selecciona la categoria dependiendo de lo que buscas</i>
+                    </div>
+                    
+                    <div class="subcategoria " data-categoria="Ventas">
+                    <div class="enlaces-subcategoria">
+                        <button class="btn-regresar"> <img class="atras" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAB4AAAAeCAYAAAA7MK6iAAAAAXNSR0IArs4c6QAAAOJJREFUSEvtld0NwjAMhK+bwQawAUxW2IARGAE2YQTkKkGRldY/dRoeWqkvaePP5/icAZ2eoRMXO3izyntKfQHwSq87USuYoCOAD4DjGrgFnKFZ5RXAzStZCw6FUrIacDhUA24ClcDNoEvgptA5MIdS57q7t+j6d7LhtMSbi0O9bqntI98/84e/AVNCXPU9qNQ0ZmniVUud17s01yZwaXI1Uy6Ba2e+6nKQzpjbIVy5RvHcmZ8BPLxGt4DLstMUOpT2sCZgBVP8U5pAP09aodLt5Imn3uNRrA6+9OMODimjJsgXhoMuHz3E3JMAAAAASUVORK5CYII=" alt="icon-regresar"/> Regresar</button>
+                        <h2 class="subtitulo" >Ventas</h2>
+                        <a class="pagina" href="./nany.html">Nany Arte y Moda</a>
+                    </div>
+                    <div class="banner-subcategoria">
+                            <img src="./icon/vecteezy_red-paper-bag-for-wine-bottles-isolated-with-clipping-path_12628010_65.png" alt="icon-ventas">
+                    </div>
+
+                    </div>
+
+                    <div class="subcategoria" data-categoria="Educación">
+                    <div class="enlaces-subcategoria">
+                        <button class="btn-regresar"> <img class="atras" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAB4AAAAeCAYAAAA7MK6iAAAAAXNSR0IArs4c6QAAAOJJREFUSEvtld0NwjAMhK+bwQawAUxW2IARGAE2YQTkKkGRldY/dRoeWqkvaePP5/icAZ2eoRMXO3izyntKfQHwSq87USuYoCOAD4DjGrgFnKFZ5RXAzStZCw6FUrIacDhUA24ClcDNoEvgptA5MIdS57q7t+j6d7LhtMSbi0O9bqntI98/84e/AVNCXPU9qNQ0ZmniVUud17s01yZwaXI1Uy6Ba2e+6nKQzpjbIVy5RvHcmZ8BPLxGt4DLstMUOpT2sCZgBVP8U5pAP09aodLt5Imn3uNRrA6+9OMODimjJsgXhoMuHz3E3JMAAAAASUVORK5CYII=" alt="icon-regresar"/> Regresar</button>
+                        <h2 class="subtitulo" >Educación</h2>
+                        <a class="pagina" href="#">Escuela Artemetema</a>
+                    </div>
+                    <div class="banner-subcategoria">
+                            <img src="./icon/vecteezy_back-to-school-element-clipart-design-illustration_9394174_293.png" alt="icon-educacion">
+                    </div>
+                    </div>
+                    <div class="subcategoria" data-categoria="Construcción">
+                        <div class="enlaces-subcategoria">
+                            <button class="btn-regresar"> <img class="atras" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAB4AAAAeCAYAAAA7MK6iAAAAAXNSR0IArs4c6QAAAOJJREFUSEvtld0NwjAMhK+bwQawAUxW2IARGAE2YQTkKkGRldY/dRoeWqkvaePP5/icAZ2eoRMXO3izyntKfQHwSq87USuYoCOAD4DjGrgFnKFZ5RXAzStZCw6FUrIacDhUA24ClcDNoEvgptA5MIdS57q7t+j6d7LhtMSbi0O9bqntI98/84e/AVNCXPU9qNQ0ZmniVUud17s01yZwaXI1Uy6Ba2e+6nKQzpjbIVy5RvHcmZ8BPLxGt4DLstMUOpT2sCZgBVP8U5pAP09aodLt5Imn3uNRrA6+9OMODimjJsgXhoMuHz3E3JMAAAAASUVORK5CYII=" alt="icon-regresar"/> Regresar</button>
+                            <h2 class="subtitulo" >Construcción</h2>
+                            <a class="pagina" href="https://www.coprinssl.com/">COPRINS S.L</a>
+                        </div>
+                        <div class="banner-subcategoria">
+                                <img src="">
+                        </div>
+                        </div>
+                    <div class="subcategoria" data-categoria="Coches">
+                        <div class="enlaces-subcategoria">
+                            <button class="btn-regresar"> <img class="atras" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAB4AAAAeCAYAAAA7MK6iAAAAAXNSR0IArs4c6QAAAOJJREFUSEvtld0NwjAMhK+bwQawAUxW2IARGAE2YQTkKkGRldY/dRoeWqkvaePP5/icAZ2eoRMXO3izyntKfQHwSq87USuYoCOAD4DjGrgFnKFZ5RXAzStZCw6FUrIacDhUA24ClcDNoEvgptA5MIdS57q7t+j6d7LhtMSbi0O9bqntI98/84e/AVNCXPU9qNQ0ZmniVUud17s01yZwaXI1Uy6Ba2e+6nKQzpjbIVy5RvHcmZ8BPLxGt4DLstMUOpT2sCZgBVP8U5pAP09aodLt5Imn3uNRrA6+9OMODimjJsgXhoMuHz3E3JMAAAAASUVORK5CYII=" alt="icon-regresar"/> Regresar</button>
+                            <h2 class="subtitulo" >Vehículos</h2>
+                            <a class="pagina" href="./pdl-motor.html">PLD Motor</a>
+                        </div>
+                        <div class="banner-subcategoria">
+                                <img src="./icon/vecteezy_toyota-innova-crysta-top-model-2393cc-automatic-transmission_20188785_755 (1).png" alt="icon-venta-coches">
+                        </div>
+                    </div>
+                </div>
+              </div>
+        </div>
+    </nav>
+</header>
+<body class="body">
+<main class="main">
+    <section id="contenedor" class="contenedor">
+        <section class="concierto">
+            <div class="img-concierto">
+                <img src="./img/concierto-png.png" alt="">
+            </div>
+            <article class="concierto-datos">
+                <div class="img-fondo">
+                    <div class="info-concierto">
+                        <h2>Un concierto transcendental: Billy Bóho y Jose Manuel (El Adorador) llevan un mensaje cristiano a travéz de la música.</h2>
+                        <h3>Fecha: Domingo 27 de agosto 2023 || Hotel Ekamche-Mbangan || 18:30H </h3>
+                        <p>La música tiene  un poder único para conectar con las emociones y transmitir mensajes profundos. En el mundo de la música cristiana,
+                             este poder se utiliza para difundir el mensaje del evangelio y llevar esperanza y consuelo a las personas. En este contexto, 
+                             los talentosos artistas Billy Bóho y Jose Manuel han unido sus fuerzas para organizar un concierto que promete ser una esperiencia 
+                             transcendental. El evento programado para el domingo  27 de agosto del presente año 2023. No solo busca dar a conocer su musica, 
+                             sino tambien transmitir un mensaje evangélico lleno de amor y fe. </p>  
+                        <p>El concierto que tendrá lugar en la ciudad de Bata concretamente en el Hotel Ekamche, promete ser una experiencia única para todos 
+                            los presentes. Billy Bóho y Jose Manuel han dedicado sus talentos a servir a Dios y llevar su mensaje a traves de sus canciones. 
+                            Su estilo musical combina una variedad de géneros creando una fusión única que atrae a personas de todas las edades y gustos musicales.</p> 
+                        <p>El objetivo principal del concierto es hacerse conocer como músicos cristianos y llegar a un público más amplio. Los artistas desean romper las 
+                            barreras y los esteriotipos asociados con la música gospel, demostrando que el género puede ser contemporáneo, relevaante y emocionante para las audiencias actuales.</p>
+                        <p>El enfoque central del concierto es transmitir un mensaje evangelístico  a través de la música. Billy Bóho y Jose Manuel creen firmemente en el poder
+                             del evangelio para cambiar vidas y desean compartir esa verdad con todos los asistentes. Para lograrlo, cada una de las canciones interpretadas durante
+                              el concierto se basará en principios y enseñanzas bíblicas, destacando el amor de Dios, la gracia y la redención que se enccuentra a traves de Jesucristo.</p>
+                              <div class="container-contact">
+                                <div class="mas-info">
+                                    <h4>Visita nuestros perfiles de instagram pulsando los siguientes perfiles. Para más información llama o escríbenos pulsando los botones.</h4>
+                                  </div>
+                                  <br>
+                                  <div class="canvas-wrapper">
+                                    <div class="container-perfil">
+                                        <a href="https://instagram.com/dickydepocacarne?igshid=NTc4MTIwNjQ2YQ==" class="canvas">
+                                            <div class="canvas_border">
+                                            </div>
+                                            <div class="canvas_img-wrapper">
+                                                <img class="canvas_img" src="img/jose.jpg" alt="">
+                                                </div>
+                                                <div class="canvas_copy canvas_copy--left">
+                                                    <strong class="canvas_copy_title">Jose</strong>
+                                                    <strong class="canvas_copy_title">Manuel</strong>
+                                                    <span class="canvas_copy_details">Cantante y músico</span>
+                                
+                                                </div>
+                                        </a>
+                                        <a class="botton-contact"  href="tel: +240 222 624 621"><img class="contacto-icon" src="./icon/bx-phone-call.svg" alt="icon-llamada"> <span>Llamar J.M</span></a> 
+                                    <a class="whatsapp " href="whatsapp://send?text=Hola, le escribo desde la página udigitaleg.com necesito información sobre el concierto&phone=+240222624621&abid=+240222624621">
+                                        <img src="./icon/bxl-whatsapp.svg" alt="icon-whatsapp">
+                                    </a>
+                                    </div>
+                                    <div class="container-perfil">
+                                        <a href="https://instagram.com/castroakoro?igshid=NTc4MTIwNjQ2YQ==" class="canvas">
+                                            <div class="canvas_border">
+                                            </div>
+                                            <div class="canvas_img-wrapper">
+                                                <img class="canvas_img" src="img/billy.jpg" alt="">
+                                                </div>
+                                                <div class="canvas_copy">
+                                                    <strong class="canvas_copy_title">Billy</strong>
+                                                    <strong class="canvas_copy_title">Bóho</strong>
+                                                    <span class="canvas_copy_details">Cantante y músico</span>
+                                                </div>
+                                        </a>
+                                        <a class="botton-contact"  href="tel: +240 222 536 119"><img class="contacto-icon" src="./icon/bx-phone-call.svg" alt="icon-llamada"> <span>Llamar B.B</span></a>
+                                    <a class="whatsapp " href="whatsapp://send?text=Hola, le escribo desdde la página udigitaleg.com necesito información sobre el concierto&phone=+240222536119&abid=+240222536119">
+                                        <img src="./icon/bxl-whatsapp.svg" alt="icon-whatsapp">
+                                     </a>
+                                    </div>
+                                    
+                                </div> 
+       
+                                <br>
+                              </div>
+                   </div>    
+                </div>
+               
+                <div class="anuncios">
+    
+                </div>
+            </article>
+            
+        </section>
+
+    </section>
+</main>
+<!-------------FOOTER STARTS--------------->
+    <footer class="footer">
+
+    </footer>
+<!-------------FOOTER ENDS----------------->
+    <script src="./js/main.js" ></script>
+    <script src="./js/anuncio.js"></script>
+    <script src="./js/slider.js"></script>
+    <script src="./js/footer.js"></script>
+</body>
+</html>

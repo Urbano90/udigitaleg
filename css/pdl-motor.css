@@ -1,0 +1,376 @@
+
+:root {
+    --yellow: #b8a420;
+    --light-yellow: #eddc70;
+    --black: #130f40;
+    --light-color:#f4e99a;
+    --border: .1rem solid rgba(0,0,0,.1);
+    --box-shadow: 0.5rem .3rem rgba(0,0,0,.1);
+}
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Quicksand', sans-serif; font-family: 'Roboto', sans-serif;
+    box-sizing: border-box;
+    outline: none;
+    border: none;
+    text-decoration: none;
+   /* text-transform: capitalize;   /* hace que las palabras estén en mayúscula despues de un espacio */
+    transition: all .2s linear;
+    font-size: 14px;
+}
+html {
+    font-size: 62.5%;
+    scroll-padding-top: 7rem;
+    scroll-behavior: smooth;
+}
+.menu {
+    font-size: 16px;
+}
+.heading  {
+    text-align: center;
+    font-size: 24px;
+    color: var(--black);
+    padding-top: 12px;
+}
+.heading span {
+    position: relative;
+    z-index: 0;
+    font-size: 24px;
+}
+.heading span::before {
+    content: '';
+    position: absolute;
+    bottom: 1rem;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    z-index: -1;
+    background: var(--yellow);
+    clip-path: polygon(0 90%, 100% 80%, 100% 100%, 0% 100%);
+    font-size: 24px;
+}
+.header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 5px 15px;
+    position: relative;
+    top: 70px;
+}
+.header.active {   /* Esta classe es para darle el box-sadow cuando el scrolles mayor que cero*/
+   box-shadow: var(--box-shadow);  /* se activa con javaScript*/
+   padding: 2rem 9%;
+}
+/*********seccion 2 iconos*******/
+
+.navbar {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+    background: #000;
+    padding: 5px;
+}
+.navbar a {
+    color: #fff;
+    padding: 5px 8px;
+    font-weight: bold;
+    font-size: 16px;
+}
+.navbar a:hover {
+    color: black;
+    background: #fff;
+    border-radius: 4px;
+    font-weight: bold;
+}
+.nav-cabecera {
+    background-image: url(../img/img-pdl.jpg);
+    background-position: center;
+    background-size: cover;
+    height: 210px;
+    position: relative;
+}
+.container-logo {
+    display: grid;
+    justify-content: center;
+    position: relative;
+    width: 100%;
+    height: 100%;
+    margin: 0 auto;
+    background: #17181899;
+    color: #f5ebbb;
+    text-align: center;
+}
+.container-logo p {
+    width: 300px;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+.logo {
+    height: 80px;
+    width: 150px;
+    object-fit: contain;
+    margin: 0 auto;
+    position: relative;
+    top: 45%;
+}
+ .logo.active {
+    rotate: 360deg;
+}
+.nav-cabecera .subtitle1 {
+    color: #bfb368;
+    font-size: 16px;
+}
+.icons-container {
+    padding-bottom: 1.2rem;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
+    gap: 1.5rem;
+}
+.featured {
+    display: block;
+}
+ /************nuestros servicios**************/
+ .services .box-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr));
+    width: 100%;
+    justify-content: center;
+    gap: 10px;
+    padding: 10px;
+ }
+ .services .box-container .box {
+    text-align: center;
+    padding: 1rem;
+    border-radius: .5rem;
+    box-shadow: var(--box-shadow);
+    border: var(--border);
+    color: #453e3e;
+    background: #fff9ca;
+ }
+ .services .box-container .box img {
+    height: 40px;
+    width: 40px;
+    padding: 5px;
+    object-fit: contain;
+    background: var(--light-color);
+   border-radius: 50%;
+}
+.services .box-container .box h3 {
+    color: var(--yellow);
+    font-size: 18px;
+}
+.services .box-container .box:hover {
+    color: var(--black);
+    background: var(--light-color);
+}
+.services .box-container .box:hover img {
+    background: #fff;
+}
+.services .box-container .box:hover p{
+        color: var(--black);
+}
+
+.container-productos {
+    display: grid;
+    grid-template-columns: 74% 25%;
+    justify-content: center;
+    gap: 10px;
+    background: var(--light-color);
+}
+
+/**********featured section*********/
+.swiper-wrapper {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
+    gap: 10px;
+}
+
+.productos {
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
+    gap: 10px;
+    padding: 10px;
+}
+.producto {
+    display: grid; /* para darle posicion bloque a la section*/
+    height: 230px;
+    padding: 10px;
+    gap: 5px;
+    box-shadow: var(--box-shadow);
+    border: var(--border);
+    border-radius: .5rem;
+    background: #fff;
+}
+.producto .slider {
+    display: flex;
+    width: 100%;
+    height: 170px;
+    overflow-x: scroll;
+}
+.producto .slider img {
+    flex: 0 0 100%;
+    width: 100%;
+    margin: 0 auto;
+    object-fit: contain;
+    scroll-snap-align: center;
+}
+.producto .detalles:hover {
+    transform: scale(1.2);
+}
+.product-info {
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    padding: 5px;
+}
+.product-info h2 {
+    font-size: 12px;
+    color: var(--yellow);
+    font-weight: lighter;
+}
+.producto span {
+    color: var(--black);
+    font-size: 12px;
+    font-weight: bold;
+}
+.nosotros {
+    text-align: center;
+}
+.subtitle2 {
+    font-weight: bold;
+    z-index: 2;
+}
+.subtitle2 span {
+    background-color: var(--light-color);
+    padding: 0 15px;
+    z-index: 99;
+    position: relative;
+    font-size: 15px;
+    padding: 7px;
+    color: var(--yellow);
+}
+.subtitle2::after {
+    background: var(--light-color);
+    content: "";
+    display: inline-block;
+    height: 2px;
+    width: 100%;
+    position: relative;
+    top: -22px;
+    z-index: 1;
+}
+
+.enviar {
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+    width: 110px;
+    padding: 2px;
+    border-radius: 40px;
+    border: none;
+    color: #11e755 ;
+    background: #fff;
+    box-shadow: 0px 1px 1px rgba(0, 0, 0, .30);
+    font-size: 13px;
+    cursor: pointer;
+}
+.enviar:hover {
+    transform: scale(1.03);
+    background: #18d855;
+    color: #fff;
+}
+.contactos {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
+    gap: 7px;
+}
+.contactos div img {
+    width: 25px;
+    height: 20px;
+    position: relative;
+    top: 7px;
+}
+.contactos h3 {
+    font-size: 17px;
+    color: var(--yellow);
+}
+.contactos a {
+    color: #130f40;
+}
+.footer-coches {
+    background: var(--light-color);
+    padding: 10px;
+    box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.481);
+    color: black;
+    font-size: 16px;
+}
+.footer-coches .box-container .box {
+    padding: 5px;
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+}
+.footer-coches .box-container h2{
+    color: #130f40;
+    text-align: center;
+    font-size: 18px;
+}
+.footer-coches .box-container .box a {
+    display: flex;
+    gap: 10px;
+    padding: 8px 0;
+    color: #130f40;
+}
+.footer-coches .box-container .box a:hover {
+    color: #000;
+    font-size: 14px;
+}
+.footer-coches .box-container .box a img {
+    padding: 2px;
+    background: #fff;
+    border-radius: 100%;
+    width: 25px;
+    height: 25px;
+    object-fit: contain;
+}
+.footer-coches .box-container .box a:hover img {
+    padding: 4px;
+    background: var(--light-color);
+}
+.credit {
+    text-align: center;
+    padding: 10px;
+}
+@media screen and (max-width: 1000px) {
+    .container-productos{
+        padding-top: 10px;
+        grid-template-columns: 1fr;
+    }
+    .anuncios {
+        width: 100%;
+        margin: 0;
+    }
+}
+@media screen and (max-width: 750px) {
+    .container-logo-u-digital{
+        display: block;
+    }    
+    .services .box-container .box h3 {
+        color: var(--black);
+        font-size: 18px;
+    }
+}
+@media screen and (max-width: 633px) {
+    .services .box-container {
+        grid-template-columns: repeat(auto-fit, minmax(13rem, 1fr));
+     }
+}
+@media screen and (max-width: 400px) {
+    .services .box-container {
+        width: 100%;
+     }
+
+}

@@ -1,0 +1,111 @@
+
+.container-slider {
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 150px;
+    margin: 0 auto;
+    overflow: hidden;
+    position: relative;
+   background: #6f6a6a5e;
+}
+.title-slider {
+    color: #002868;
+    text-align: center;
+    padding-top: 5px;
+    font-size: 22px;
+}
+.slider {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 400%; /*se pone el porcentaje dependiendo de la cantidades de imagenes que tienes*/
+    height: 80%;
+    margin-left: -100%;
+    position: relative;
+}
+.slider:before { /* para poner el slider oscuro*/
+    content: "";
+    position: absolute;
+    z-index: 0;
+    width: 100%;
+    height: 100%;
+  /*  background: rgba(0, 0, 0, 0.3);  */
+}
+.slider__section {
+    position: relative;
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    padding: 0;
+}
+.slider__section .slider__img {
+    display: block;
+    width: 120px;
+    height: 120px;
+    max-width: 18rem;
+    max-height: 18rem;
+    object-fit: contain;
+    border-radius: 5px;
+    margin-bottom: 40px;
+ /*   background: #58575758; */
+}
+.slider__btn {
+    position: absolute;
+    z-index: 0;
+    width: 30px;
+    height: 35px;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 30px;
+    font-size: bold;
+    font-family: monospace;
+    text-align: center;
+    border-radius: 4px;
+    cursor: pointer;
+}
+.slider__btn:hover {
+    background: #fff;
+}
+.slider__btn--left {
+    left: 10px;
+}
+.slider__btn--right {
+    right: 10px;
+}
+.slider__content {
+    position: absolute;
+    z-index: 0;
+    top: 75%;
+    width: 100%;
+    display: grid;
+    justify-content: center;
+}
+.slider__txt {
+    display: none;
+    text-align: center;
+    margin: 5px 0;
+    background: #54697cbd;
+    color: #16328f;
+    padding: 2px 10px;
+}
+.slider__link {
+    display: block;
+    box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.327);
+   padding: 6px 7px;
+   text-align: center;
+   text-decoration: none;
+   background: #045d31e2;
+   color: #ccc;
+   margin: 0 auto;
+   border-radius: 4px;
+   font-weight: lighter;
+   font-size: 14px;
+}
+.slider__link:hover {
+   color: #fff;
+   background: #0d683ee8;
+   padding: 6px 10px;
+}
