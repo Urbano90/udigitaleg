@@ -31,3 +31,9 @@ window.addEventListener("load", () => {
 
   });
 });
+const buscar = document.querySelector(".buscar");
+const barraBusqueda = document.querySelector(".barra-busqueda");
+
+buscar.addEventListener("click",(e) => {
+   barraBusqueda.style.display = 'flex';
+});
