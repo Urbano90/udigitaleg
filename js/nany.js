@@ -103,15 +103,13 @@ const productos = [
     </div>`;
     document.querySelector(".productos").innerHTML += productoHTML;
 };
-
-            
+        
   function cargarProductos() {
      for(const producto of productos) {
          generarProductoHTML(producto);
      }
   }
   
-
   function enviarPorWhatsapp(id) {
      const producto = productos.find(p =>p.id === id);
      const mensaje = `Hola Moda Nany, me interesa el producto de nombre ${producto.nombre}  que tiene el precio de ${formatPrecio(producto.precio)}  y el ID = ${producto.id}.  ¿podemos hablar sobre él?`
