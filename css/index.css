@@ -108,7 +108,6 @@ body {
 }
 .header .categorias a.activo {
     color: green;
-    border-bottom: #fff 2px solid;
     font-weight: bolder;
 }
 .container-busqueda {
@@ -116,6 +115,8 @@ body {
     justify-content: center;
     align-items: center;
     padding: 5px;
+    position: relative;
+    top: 15px;
 }
 .barra-busqueda {
     display: none;
@@ -154,7 +155,9 @@ body {
         bottom: 10px;
     }
 
-
+    .header .categorias a {
+        margin-bottom: 30px;
+    }
     .section1 {
         display: grid;
         grid-template-columns: 1fr;
