@@ -24,11 +24,10 @@ main article {
     color: #fff;
     justify-content: center;
 }
-
 /*  Enlaces del nav */
 .menu {
     background: #522370;
-    padding: 5px;    /* 5px arriba y abajo y 0 en los lados */
+    padding: 5px 20px;    /* 5px arriba y abajo y 0 en los lados */
     padding-bottom: 10px;
     position: fixed;
     z-index: 2000;
@@ -146,8 +145,9 @@ main article {
     font-size: 15px;
 }
 .contenedor-enlaces-nav .enlaces a:hover {
-    color: #130f40;
-    background: #fff;
+    color: #7ea3ef;
+    background: #590d89;
+    box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.481);
 }
 /* Empezamos a trabajar con la grids */
 .contenedor-grids {

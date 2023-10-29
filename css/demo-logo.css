@@ -29,7 +29,6 @@
       transform: translateZ(-1000em);
     }
   }
-  
   @keyframes spin-letters {
     0%, 10% {
       opacity: 0;
@@ -54,13 +53,11 @@
       transform: translateZ(0);
     }
   }
-  
   /* Make the 3D work on the container */
   .starwars-demo {
     perspective: 100%;
     transform-style: preserve-3d;
   }
-  
   /* General styles and layout */
   .container-demo {
       display: grid;
@@ -79,7 +76,7 @@
       position: relative;
       transform: translate(-50%, -50%);
       width: 18em;
-      top: 90px;
+      top: 140px;
       left: 50%;
   }
   .starwars-demo img {
@@ -89,7 +86,6 @@
     position: relative;
     bottom: 70px;
 }
-  
   .byline span {
     display: inline-block;
   }
